@@ -73,7 +73,7 @@ function applyLinksToButtons() {
     };
     
     // Loop melalui semua tombol link
-    document.querySelectorAll('.cta-button, .footer-social-link').forEach(button => {
+    document.querySelectorAll('.cta-button, .footer-social-link, .instagram-link, .instagram-cta').forEach(button => {
         const linkName = button.getAttribute('data-link');
         
         if (linkName && linkMapping[linkName]) {
