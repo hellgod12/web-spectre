@@ -463,6 +463,43 @@ body {
     text-transform: uppercase;
 }
 
+.catalog-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 40px;
+    margin: 30px auto 0;
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all var(--transition-medium);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    max-width: 300px;
+}
+
+.catalog-link:hover {
+    background: var(--glass-bg);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.catalog-link svg {
+    width: 20px;
+    height: 20px;
+    transition: transform var(--transition-medium);
+}
+
+.catalog-link:hover svg {
+    transform: translateX(4px);
+}
+
 /* Actions Section */
 .actions-section {
     display: flex;

@@ -1,0 +1,92 @@
+{
+  "featured": [
+    {
+      "id": 1,
+      "name": "SPECTRE DECK 001",
+      "category": "decks",
+      "price": "Rp 450.000",
+      "image": "assets/images/products/decks/photo_2026-06-12_23-39-27.jpg",
+      "description": "Premium maple deck with custom graphic"
+    },
+    {
+      "id": 2,
+      "name": "SPECTRE APPAREL 001",
+      "category": "apparel",
+      "price": "Rp 350.000",
+      "image": "assets/images/products/apparel/photo_2026-06-12_23-39-07.jpg",
+      "description": "Premium streetwear apparel"
+    },
+    {
+      "id": 3,
+      "name": "SPECTRE APPAREL 002",
+      "category": "apparel",
+      "price": "Rp 300.000",
+      "image": "assets/images/products/apparel/photo_2026-06-12_23-39-11.jpg",
+      "description": "Premium streetwear apparel"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "SPECTRE DECK 001",
+      "category": "decks",
+      "price": "Rp 450.000",
+      "image": "assets/images/products/decks/photo_2026-06-12_23-39-27.jpg",
+      "description": "Premium maple deck with custom graphic"
+    },
+    {
+      "id": 2,
+      "name": "SPECTRE DECK 002",
+      "category": "decks",
+      "price": "Rp 450.000",
+      "image": "assets/images/products/decks/photo_2026-06-12_23-39-31.jpg",
+      "description": "Premium maple deck with custom graphic"
+    },
+    {
+      "id": 3,
+      "name": "SPECTRE APPAREL 001",
+      "category": "apparel",
+      "price": "Rp 350.000",
+      "image": "assets/images/products/apparel/photo_2026-06-12_23-39-07.jpg",
+      "description": "Premium streetwear apparel"
+    },
+    {
+      "id": 4,
+      "name": "SPECTRE APPAREL 002",
+      "category": "apparel",
+      "price": "Rp 300.000",
+      "image": "assets/images/products/apparel/photo_2026-06-12_23-39-11.jpg",
+      "description": "Premium streetwear apparel"
+    },
+    {
+      "id": 5,
+      "name": "SPECTRE APPAREL 003",
+      "category": "apparel",
+      "price": "Rp 280.000",
+      "image": "assets/images/products/apparel/photo_2026-06-12_23-39-14.jpg",
+      "description": "Premium streetwear apparel"
+    }
+  ],
+  "categories": [
+    {
+      "id": "decks",
+      "name": "Decks",
+      "description": "Premium skateboards"
+    },
+    {
+      "id": "apparel",
+      "name": "Apparel",
+      "description": "Streetwear clothing"
+    },
+    {
+      "id": "stickers",
+      "name": "Stickers",
+      "description": "Vinyl stickers"
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories",
+      "description": "Skate accessories"
+    }
+  ]
+}

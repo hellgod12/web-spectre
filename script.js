@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Setelah links dimuat, inisialisasi semua fitur
         initLoadingScreen();
         applyLinksToButtons();
+        loadFeaturedProducts();
         initClickTracking();
         initScrollReveal();
         initShareButton();
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Gagal memuat links.json:', error);
         // Tetap lanjutkan inisialisasi meskipun gagal memuat links.json
         initLoadingScreen();
+        loadFeaturedProducts();
         initClickTracking();
         initScrollReveal();
         initShareButton();
@@ -64,7 +66,8 @@ function applyLinksToButtons() {
         'explore-collection': 'explore_collection',
         'direct-contact': 'direct_contact',
         'join-movement': 'join_movement',
-        'instagram': 'instagram'
+        'instagram': 'instagram',
+        'catalog': 'catalog'
     };
     
     // Loop melalui semua tombol link
@@ -86,6 +89,35 @@ function applyLinksToButtons() {
             }
         }
     });
+}
+
+// Load featured products from products.json
+async function loadFeaturedProducts() {
+    try {
+        const response = await fetch('products.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const productsData = await response.json();
+        
+        const featuredProducts = productsData.featured || [];
+        
+        featuredProducts.forEach((product, index) => {
+            const card = document.getElementById(`featured-product-${index + 1}`);
+            if (card) {
+                const imageContainer = card.querySelector('.release-image');
+                if (product.image) {
+                    imageContainer.innerHTML = `<img src="${product.image}" alt="${product.name}" loading="lazy">`;
+                } else {
+                    imageContainer.innerHTML = `<div class="release-placeholder"><span>${product.name}</span></div>`;
+                }
+            }
+        });
+        
+        console.log('Featured products loaded:', featuredProducts);
+    } catch (error) {
+        console.error('Failed to load featured products:', error);
+    }
 }
 
 // Loading Screen
