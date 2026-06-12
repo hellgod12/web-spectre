@@ -1,13 +1,13 @@
-{
-  "photos": [
-    {
-      "image": "assets/images/instagram/ig-01.jpg"
-    },
-    {
-      "image": "assets/images/instagram/ig-02.jpg"
-    },
-    {
-      "image": "assets/images/instagram/ig-03.jpg"
-    }
-  ]
+﻿{
+    "photos":  [
+                   {
+                       "image":  "assets/images/instagram/Screenshot 2026-06-13 022635.png"
+                   },
+                   {
+                       "image":  "assets/images/instagram/Screenshot 2026-06-13 022711.png"
+                   },
+                   {
+                       "image":  "assets/images/instagram/Screenshot 2026-06-13 022724.png"
+                   }
+               ]
 }
