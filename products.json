@@ -1,92 +1,92 @@
-{
-  "featured": [
-    {
-      "id": 1,
-      "name": "SPECTRE Skateboard Deck",
-      "category": "decks",
-      "price": "Rp 450.000",
-      "image": "assets/images/products/decks/photo_2026-06-12_23-39-27.jpg",
-      "description": "Premium maple skateboard deck dengan custom graphic design"
-    },
-    {
-      "id": 2,
-      "name": "SPECTRE Streetwear Hoodie",
-      "category": "apparel",
-      "price": "Rp 350.000",
-      "image": "assets/images/products/apparel/photo_2026-06-12_23-39-07.jpg",
-      "description": "Premium hoodie dengan SPECTRE branding"
-    },
-    {
-      "id": 3,
-      "name": "SPECTRE Streetwear Tee",
-      "category": "apparel",
-      "price": "Rp 300.000",
-      "image": "assets/images/products/apparel/photo_2026-06-12_23-39-11.jpg",
-      "description": "Premium t-shirt dengan SPECTRE branding"
-    }
-  ],
-  "products": [
-    {
-      "id": 1,
-      "name": "SPECTRE Skateboard Deck",
-      "category": "decks",
-      "price": "Rp 450.000",
-      "image": "assets/images/products/decks/photo_2026-06-12_23-39-27.jpg",
-      "description": "Premium maple skateboard deck dengan custom graphic design"
-    },
-    {
-      "id": 2,
-      "name": "SPECTRE Skateboard Deck Pro",
-      "category": "decks",
-      "price": "Rp 450.000",
-      "image": "assets/images/products/decks/photo_2026-06-12_23-39-31.jpg",
-      "description": "Premium maple skateboard deck pro series dengan custom graphic"
-    },
-    {
-      "id": 3,
-      "name": "SPECTRE Streetwear Hoodie",
-      "category": "apparel",
-      "price": "Rp 350.000",
-      "image": "assets/images/products/apparel/photo_2026-06-12_23-39-07.jpg",
-      "description": "Premium hoodie dengan SPECTRE branding"
-    },
-    {
-      "id": 4,
-      "name": "SPECTRE Streetwear Tee",
-      "category": "apparel",
-      "price": "Rp 300.000",
-      "image": "assets/images/products/apparel/photo_2026-06-12_23-39-11.jpg",
-      "description": "Premium t-shirt dengan SPECTRE branding"
-    },
-    {
-      "id": 5,
-      "name": "SPECTRE Streetwear Cap",
-      "category": "apparel",
-      "price": "Rp 280.000",
-      "image": "assets/images/products/apparel/photo_2026-06-12_23-39-14.jpg",
-      "description": "Premium cap dengan SPECTRE branding"
-    }
-  ],
-  "categories": [
-    {
-      "id": "decks",
-      "name": "Decks",
-      "description": "Premium skateboards"
-    },
-    {
-      "id": "apparel",
-      "name": "Apparel",
-      "description": "Streetwear clothing"
-    },
-    {
-      "id": "stickers",
-      "name": "Stickers",
-      "description": "Vinyl stickers"
-    },
-    {
-      "id": "accessories",
-      "name": "Accessories",
-      "description": "Skate accessories"
-    }
-  ]
+﻿{
+    "categories":  [
+                       {
+                           "description":  "Premium skateboards",
+                           "name":  "Decks",
+                           "id":  "decks"
+                       },
+                       {
+                           "description":  "Streetwear clothing",
+                           "name":  "Apparel",
+                           "id":  "apparel"
+                       },
+                       {
+                           "description":  "Vinyl stickers",
+                           "name":  "Stickers",
+                           "id":  "stickers"
+                       },
+                       {
+                           "description":  "Skate accessories",
+                           "name":  "Accessories",
+                           "id":  "accessories"
+                       }
+                   ],
+    "products":  [
+                     {
+                         "id":  1,
+                         "name":  "SPECTRE Skateboard Deck",
+                         "description":  "Premium maple skateboard deck dengan custom graphic",
+                         "price":  "Rp 450.000",
+                         "image":  "assets/images/products/decks/Screenshot 2026-06-13 033713.png",
+                         "category":  "decks"
+                     },
+                     {
+                         "id":  2,
+                         "name":  "SPECTRE Skateboard Deck",
+                         "description":  "Premium maple skateboard deck dengan custom graphic",
+                         "price":  "Rp 450.000",
+                         "image":  "assets/images/products/decks/Screenshot 2026-06-13 033720.png",
+                         "category":  "decks"
+                     },
+                     {
+                         "id":  3,
+                         "name":  "SPECTRE Streetwear",
+                         "description":  "Premium streetwear apparel dengan SPECTRE branding",
+                         "price":  "Rp 350.000",
+                         "image":  "assets/images/products/apparel/Screenshot 2026-06-13 033622.png",
+                         "category":  "apparel"
+                     },
+                     {
+                         "id":  4,
+                         "name":  "SPECTRE Streetwear",
+                         "description":  "Premium streetwear apparel dengan SPECTRE branding",
+                         "price":  "Rp 350.000",
+                         "image":  "assets/images/products/apparel/Screenshot 2026-06-13 033651.png",
+                         "category":  "apparel"
+                     },
+                     {
+                         "id":  5,
+                         "name":  "SPECTRE Streetwear",
+                         "description":  "Premium streetwear apparel dengan SPECTRE branding",
+                         "price":  "Rp 350.000",
+                         "image":  "assets/images/products/apparel/Screenshot 2026-06-13 033702.png",
+                         "category":  "apparel"
+                     }
+                 ],
+    "featured":  [
+                     {
+                         "id":  1,
+                         "name":  "SPECTRE Skateboard Deck",
+                         "description":  "Premium maple skateboard deck dengan custom graphic",
+                         "price":  "Rp 450.000",
+                         "image":  "assets/images/products/decks/Screenshot 2026-06-13 033713.png",
+                         "category":  "decks"
+                     },
+                     {
+                         "id":  2,
+                         "name":  "SPECTRE Skateboard Deck",
+                         "description":  "Premium maple skateboard deck dengan custom graphic",
+                         "price":  "Rp 450.000",
+                         "image":  "assets/images/products/decks/Screenshot 2026-06-13 033720.png",
+                         "category":  "decks"
+                     },
+                     {
+                         "id":  3,
+                         "name":  "SPECTRE Streetwear",
+                         "description":  "Premium streetwear apparel dengan SPECTRE branding",
+                         "price":  "Rp 350.000",
+                         "image":  "assets/images/products/apparel/Screenshot 2026-06-13 033622.png",
+                         "category":  "apparel"
+                     }
+                 ]
 }
