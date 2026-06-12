@@ -60,21 +60,15 @@ async function loadLinksFromJSON() {
 function applyLinksToButtons() {
     // Mapping antara data-link dan nama properti di links.json
     const linkMapping = {
-        'shop': 'shop',
-        'new-arrivals': 'new_arrivals',
-        'best-sellers': 'best_sellers',
-        'instagram': 'instagram',
-        'tiktok': 'tiktok',
-        'whatsapp': 'whatsapp',
-        'contact': 'contact',
-        'catalog': 'catalog',
-        'website': 'website',
-        'shopee': 'shopee',
-        'tokopedia': 'tokopedia'
+        'enter-void': 'enter_void',
+        'explore-collection': 'explore_collection',
+        'direct-contact': 'direct_contact',
+        'join-movement': 'join_movement',
+        'instagram': 'instagram'
     };
     
     // Loop melalui semua tombol link
-    document.querySelectorAll('.link-button, .social-link').forEach(button => {
+    document.querySelectorAll('.cta-button, .footer-social-link').forEach(button => {
         const linkName = button.getAttribute('data-link');
         
         if (linkName && linkMapping[linkName]) {
@@ -99,26 +93,29 @@ function initLoadingScreen() {
     const loadingScreen = document.getElementById('loadingScreen');
     const loadingProgress = document.getElementById('loadingProgress');
     
-    // Simulate loading progress
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += Math.random() * 30;
-        if (progress >= 100) {
-            progress = 100;
-            clearInterval(interval);
-            
-            // Hide loading screen after progress completes
-            setTimeout(() => {
-                loadingScreen.classList.add('hidden');
+    // Premium loading - fade in logo, then fade out entire screen
+    setTimeout(() => {
+        // Simulate loading progress
+        let progress = 0;
+        const interval = setInterval(() => {
+            progress += Math.random() * 40;
+            if (progress >= 100) {
+                progress = 100;
+                clearInterval(interval);
                 
-                // Remove from DOM after animation
+                // Hide loading screen after 1.5 seconds
                 setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500);
-            }, 300);
-        }
-        loadingProgress.style.width = progress + '%';
-    }, 200);
+                    loadingScreen.classList.add('hidden');
+                    
+                    // Remove from DOM after animation
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }, 1500);
+            }
+            loadingProgress.style.width = progress + '%';
+        }, 150);
+    }, 300);
 }
 
 // Click Tracking using localStorage
@@ -165,7 +162,7 @@ function getClickStats() {
 
 // Scroll Reveal Animation
 function initScrollReveal() {
-    const revealElements = document.querySelectorAll('.link-button, .header, .footer, .actions-section');
+    const revealElements = document.querySelectorAll('.cta-button, .header, .footer, .brand-section, .releases-section, .release-card');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -375,23 +372,24 @@ function initHoverSound() {
 }
 */
 
-// Parallax effect on mouse move (subtle)
-function initParallax() {
-    const glowEffect = document.querySelector('.glow-effect');
+// Mouse spotlight effect (subtle luxury feel)
+function initSpotlight() {
+    const spotlight = document.createElement('div');
+    spotlight.className = 'mouse-spotlight';
+    document.body.appendChild(spotlight);
     
-    if (glowEffect) {
-        document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 30;
-            const y = (e.clientY / window.innerHeight - 0.5) * 30;
-            
-            glowEffect.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
-        });
-    }
+    document.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        
+        spotlight.style.left = x + 'px';
+        spotlight.style.top = y + 'px';
+    });
 }
 
-// Initialize parallax on larger screens only
+// Initialize spotlight on larger screens only
 if (window.innerWidth > 768) {
-    initParallax();
+    initSpotlight();
 }
 
 // Handle visibility change (pause animations when tab is not visible)

@@ -1,0 +1,13 @@
+# Robots.txt for SPECTRE - spectreskate.com
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://spectreskate.com/sitemap.xml
+
+# Disallow common bot paths
+Disallow: /assets/
+Disallow: /.git/
+Disallow: /.env
