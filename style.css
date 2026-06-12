@@ -250,8 +250,8 @@ body {
 
 .profile-image-container {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     margin-bottom: 10px;
 }
 
@@ -808,8 +808,8 @@ body {
     }
     
     .profile-image-container {
-        width: 100px;
-        height: 100px;
+        width: 112px;
+        height: 112px;
     }
     
     .brand-title {
@@ -902,6 +902,11 @@ body {
     
     .instagram-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .profile-image-container {
+        width: 144px;
+        height: 144px;
     }
 }
 
