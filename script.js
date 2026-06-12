@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initLoadingScreen();
         applyLinksToButtons();
         loadFeaturedProducts();
+        loadInstagramPhotos();
         initClickTracking();
         initScrollReveal();
         initShareButton();
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Tetap lanjutkan inisialisasi meskipun gagal memuat links.json
         initLoadingScreen();
         loadFeaturedProducts();
+        loadInstagramPhotos();
         initClickTracking();
         initScrollReveal();
         initShareButton();
@@ -120,34 +122,56 @@ async function loadFeaturedProducts() {
     }
 }
 
-// Loading Screen
+// Load Instagram photos from instagram.json
+async function loadInstagramPhotos() {
+    try {
+        const response = await fetch('instagram.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const instagramData = await response.json();
+        
+        const photos = instagramData.photos || [];
+        
+        photos.forEach((photo, index) => {
+            const link = document.getElementById(`instagram-photo-${index + 1}`);
+            if (link) {
+                const imageContainer = link.querySelector('.instagram-image');
+                if (photo.image) {
+                    imageContainer.innerHTML = `<img src="${photo.image}" alt="Instagram photo ${index + 1}" loading="lazy">`;
+                } else {
+                    imageContainer.innerHTML = `<div class="instagram-placeholder"><span>PHOTO 0${index + 1}</span></div>`;
+                }
+            }
+        });
+        
+        console.log('Instagram photos loaded:', photos);
+    } catch (error) {
+        console.error('Failed to load Instagram photos:', error);
+    }
+}
+
+// Loading Screen - Cinematic Intro
 function initLoadingScreen() {
     const loadingScreen = document.getElementById('loadingScreen');
-    const loadingProgress = document.getElementById('loadingProgress');
     
-    // Premium loading - fade in logo, then fade out entire screen
+    // Cinematic intro timing:
+    // 0.0s - Content fade in
+    // 0.3s - Logo fade in
+    // 0.6s - Text container fade in
+    // 0.9s - "BUILT DIFFERENT." fade in
+    // 1.1s - "WORN FEARLESSLY." fade in
+    // 1.7s - Loading screen fade out
+    // 2.5s - Loading screen removed
+    
     setTimeout(() => {
-        // Simulate loading progress
-        let progress = 0;
-        const interval = setInterval(() => {
-            progress += Math.random() * 40;
-            if (progress >= 100) {
-                progress = 100;
-                clearInterval(interval);
-                
-                // Hide loading screen after 1.5 seconds
-                setTimeout(() => {
-                    loadingScreen.classList.add('hidden');
-                    
-                    // Remove from DOM after animation
-                    setTimeout(() => {
-                        loadingScreen.style.display = 'none';
-                    }, 500);
-                }, 1500);
-            }
-            loadingProgress.style.width = progress + '%';
-        }, 150);
-    }, 300);
+        loadingScreen.classList.add('hidden');
+        
+        // Remove from DOM after animation
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 800);
+    }, 1700);
 }
 
 // Click Tracking using localStorage

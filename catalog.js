@@ -3,6 +3,7 @@
 
 let productsData = {};
 let currentCategory = 'all';
+let shopUrl = '';
 
 // Load products from products.json
 async function loadProducts() {
@@ -17,6 +18,24 @@ async function loadProducts() {
     } catch (error) {
         console.error('Failed to load products.json:', error);
         productsData = {};
+        throw error;
+    }
+}
+
+// Load shop URL from links.json
+async function loadShopUrl() {
+    try {
+        const response = await fetch('links.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const linksData = await response.json();
+        shopUrl = linksData.explore_collection || '';
+        console.log('Shop URL loaded:', shopUrl);
+        return shopUrl;
+    } catch (error) {
+        console.error('Failed to load links.json:', error);
+        shopUrl = '';
         throw error;
     }
 }
@@ -49,9 +68,12 @@ function renderProducts(category = 'all') {
 
 // Create product card element
 function createProductCard(product, index) {
-    const card = document.createElement('div');
+    const card = document.createElement('a');
     card.className = 'product-card';
     card.style.animation = `fadeInUp 0.5s ease ${index * 0.1}s both`;
+    card.href = shopUrl;
+    card.target = '_blank';
+    card.rel = 'noopener';
     
     const imageHtml = product.image 
         ? `<img src="${product.image}" alt="${product.name}" loading="lazy">`
@@ -65,7 +87,7 @@ function createProductCard(product, index) {
             <div class="product-category">${product.category}</div>
             <h3 class="product-name">${product.name}</h3>
             <p class="product-description">${product.description}</p>
-            <div class="product-price">${product.price}</div>
+            <div class="product-cta">VIEW ON SHOPEE →</div>
         </div>
     `;
     
@@ -91,30 +113,27 @@ function initCategoryFilter() {
     });
 }
 
-// Initialize loading screen
+// Initialize loading screen - Cinematic Intro
 function initLoadingScreen() {
     const loadingScreen = document.getElementById('loadingScreen');
-    const loadingProgress = document.getElementById('loadingProgress');
+    
+    // Cinematic intro timing:
+    // 0.0s - Content fade in
+    // 0.3s - Logo fade in
+    // 0.6s - Text container fade in
+    // 0.9s - "BUILT DIFFERENT." fade in
+    // 1.1s - "WORN FEARLESSLY." fade in
+    // 1.7s - Loading screen fade out
+    // 2.5s - Loading screen removed
     
     setTimeout(() => {
-        let progress = 0;
-        const interval = setInterval(() => {
-            progress += Math.random() * 40;
-            if (progress >= 100) {
-                progress = 100;
-                clearInterval(interval);
-                
-                setTimeout(() => {
-                    loadingScreen.classList.add('hidden');
-                    
-                    setTimeout(() => {
-                        loadingScreen.style.display = 'none';
-                    }, 500);
-                }, 1500);
-            }
-            loadingProgress.style.width = progress + '%';
-        }, 150);
-    }, 300);
+        loadingScreen.classList.add('hidden');
+        
+        // Remove from DOM after animation
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 800);
+    }, 1700);
 }
 
 // Initialize particles
@@ -167,7 +186,7 @@ async function initFooterLinks() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    loadProducts().then(() => {
+    Promise.all([loadProducts(), loadShopUrl()]).then(() => {
         initLoadingScreen();
         renderProducts('all');
         initCategoryFilter();
