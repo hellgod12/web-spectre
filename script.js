@@ -74,7 +74,7 @@ function applyLinksToButtons() {
     };
     
     // Loop melalui semua tombol link
-    document.querySelectorAll('.cta-button, .footer-social-link, .instagram-link, .instagram-cta').forEach(button => {
+    document.querySelectorAll('.cta-button, .footer-social-link, .instagram-link, .instagram-cta, .platform-card').forEach(button => {
         const linkName = button.getAttribute('data-link');
         
         if (linkName && linkMapping[linkName]) {
@@ -85,11 +85,14 @@ function applyLinksToButtons() {
             if (url && url.trim() !== '') {
                 button.href = url;
                 button.style.display = ''; // Pastikan tombol terlihat
+                button.style.pointerEvents = 'auto';
+                button.style.opacity = '1';
                 console.log(`Applied URL to ${button.className}: ${url}`);
             } else {
-                // Sembunyikan tombol jika URL kosong
-                button.style.display = 'none';
-                console.log(`Tombol ${linkName} disembunyikan karena URL kosong`);
+                // Tampilkan disabled state jika URL kosong
+                button.style.pointerEvents = 'none';
+                button.style.opacity = '0.5';
+                console.log(`Tombol ${linkName} disabled karena URL kosong`);
             }
         }
     });
