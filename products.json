@@ -2,69 +2,69 @@
   "featured": [
     {
       "id": 1,
-      "name": "SPECTRE DECK 001",
+      "name": "SPECTRE Skateboard Deck",
       "category": "decks",
       "price": "Rp 450.000",
       "image": "assets/images/products/decks/photo_2026-06-12_23-39-27.jpg",
-      "description": "Premium maple deck with custom graphic"
+      "description": "Premium maple skateboard deck dengan custom graphic design"
     },
     {
       "id": 2,
-      "name": "SPECTRE APPAREL 001",
+      "name": "SPECTRE Streetwear Hoodie",
       "category": "apparel",
       "price": "Rp 350.000",
       "image": "assets/images/products/apparel/photo_2026-06-12_23-39-07.jpg",
-      "description": "Premium streetwear apparel"
+      "description": "Premium hoodie dengan SPECTRE branding"
     },
     {
       "id": 3,
-      "name": "SPECTRE APPAREL 002",
+      "name": "SPECTRE Streetwear Tee",
       "category": "apparel",
       "price": "Rp 300.000",
       "image": "assets/images/products/apparel/photo_2026-06-12_23-39-11.jpg",
-      "description": "Premium streetwear apparel"
+      "description": "Premium t-shirt dengan SPECTRE branding"
     }
   ],
   "products": [
     {
       "id": 1,
-      "name": "SPECTRE DECK 001",
+      "name": "SPECTRE Skateboard Deck",
       "category": "decks",
       "price": "Rp 450.000",
       "image": "assets/images/products/decks/photo_2026-06-12_23-39-27.jpg",
-      "description": "Premium maple deck with custom graphic"
+      "description": "Premium maple skateboard deck dengan custom graphic design"
     },
     {
       "id": 2,
-      "name": "SPECTRE DECK 002",
+      "name": "SPECTRE Skateboard Deck Pro",
       "category": "decks",
       "price": "Rp 450.000",
       "image": "assets/images/products/decks/photo_2026-06-12_23-39-31.jpg",
-      "description": "Premium maple deck with custom graphic"
+      "description": "Premium maple skateboard deck pro series dengan custom graphic"
     },
     {
       "id": 3,
-      "name": "SPECTRE APPAREL 001",
+      "name": "SPECTRE Streetwear Hoodie",
       "category": "apparel",
       "price": "Rp 350.000",
       "image": "assets/images/products/apparel/photo_2026-06-12_23-39-07.jpg",
-      "description": "Premium streetwear apparel"
+      "description": "Premium hoodie dengan SPECTRE branding"
     },
     {
       "id": 4,
-      "name": "SPECTRE APPAREL 002",
+      "name": "SPECTRE Streetwear Tee",
       "category": "apparel",
       "price": "Rp 300.000",
       "image": "assets/images/products/apparel/photo_2026-06-12_23-39-11.jpg",
-      "description": "Premium streetwear apparel"
+      "description": "Premium t-shirt dengan SPECTRE branding"
     },
     {
       "id": 5,
-      "name": "SPECTRE APPAREL 003",
+      "name": "SPECTRE Streetwear Cap",
       "category": "apparel",
       "price": "Rp 280.000",
       "image": "assets/images/products/apparel/photo_2026-06-12_23-39-14.jpg",
-      "description": "Premium streetwear apparel"
+      "description": "Premium cap dengan SPECTRE branding"
     }
   ],
   "categories": [
