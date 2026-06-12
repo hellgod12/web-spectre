@@ -549,7 +549,7 @@ body {
 
 /* Instagram Showcase Section */
 .instagram-section {
-    margin: 60px 0;
+    margin: 40px 0;
     animation: fadeInUp 0.6s ease 2.2s both;
 }
 
@@ -557,7 +557,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    margin: 40px 0;
+    margin: 30px 0;
 }
 
 .instagram-link {
@@ -616,7 +616,7 @@ body {
     justify-content: center;
     gap: 12px;
     padding: 20px 40px;
-    margin: 30px auto 0;
+    margin: 20px auto 0;
     background: transparent;
     border: 1px solid var(--glass-border);
     color: var(--color-white);
