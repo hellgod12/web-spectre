@@ -84,6 +84,7 @@ function applyLinksToButtons() {
             if (url && url.trim() !== '') {
                 button.href = url;
                 button.style.display = ''; // Pastikan tombol terlihat
+                console.log(`Applied URL to ${button.className}: ${url}`);
             } else {
                 // Sembunyikan tombol jika URL kosong
                 button.style.display = 'none';
@@ -400,7 +401,8 @@ function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            if (href !== '#') {
+            // Check if this is an external URL (starts with http)
+            if (href !== '#' && !href.startsWith('http')) {
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
