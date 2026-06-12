@@ -553,6 +553,117 @@ body {
     animation: fadeInUp 0.6s ease 2.2s both;
 }
 
+/* Collection Page Styles */
+.collection-section {
+    margin: 60px 0;
+    animation: fadeInUp 0.6s ease 0.5s both;
+}
+
+.collection-subtitle {
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.6s ease 0.6s both;
+}
+
+.platform-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 40px 0;
+}
+
+.platform-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 32px;
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all var(--transition-medium);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: 12px;
+    animation: fadeInUp 0.6s ease 0.7s both;
+}
+
+.platform-card:nth-child(1) {
+    animation-delay: 0.7s;
+}
+
+.platform-card:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.platform-card:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.platform-card:hover {
+    background: var(--glass-bg);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.platform-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.platform-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.platform-info {
+    flex: 1;
+    text-align: left;
+}
+
+.platform-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.platform-description {
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.platform-arrow {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform var(--transition-medium);
+}
+
+.platform-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.platform-card:hover .platform-arrow {
+    transform: translateX(4px);
+}
+
 .instagram-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -871,6 +982,29 @@ body {
     .footer {
         padding: 30px 20px 20px;
     }
+    
+    .platform-card {
+        padding: 20px 24px;
+        gap: 16px;
+    }
+    
+    .platform-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .platform-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .platform-name {
+        font-size: 1rem;
+    }
+    
+    .platform-description {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 360px) {
@@ -880,6 +1014,29 @@ body {
     
     .instagram-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .platform-card {
+        padding: 18px 20px;
+        gap: 14px;
+    }
+    
+    .platform-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .platform-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .platform-name {
+        font-size: 0.95rem;
+    }
+    
+    .platform-description {
+        font-size: 0.75rem;
     }
 }
 
@@ -907,6 +1064,29 @@ body {
     .profile-image-container {
         width: 144px;
         height: 144px;
+    }
+    
+    .platform-card {
+        padding: 22px 28px;
+        gap: 18px;
+    }
+    
+    .platform-icon {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .platform-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .platform-name {
+        font-size: 1.05rem;
+    }
+    
+    .platform-description {
+        font-size: 0.82rem;
     }
 }
 

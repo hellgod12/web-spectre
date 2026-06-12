@@ -69,6 +69,7 @@ function applyLinksToButtons() {
         'direct-contact': 'direct_contact',
         'join-movement': 'join_movement',
         'instagram': 'instagram',
+        'tiktok-shop': 'tiktok_shop',
         'catalog': 'catalog'
     };
     
