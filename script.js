@@ -363,7 +363,7 @@ function initParticles() {
             position: absolute;
             width: ${Math.random() * 3 + 1}px;
             height: ${Math.random() * 3 + 1}px;
-            background: rgba(255, 255, 255, ${Math.random() * 0.3 + 0.1});
+            background: rgba(17, 17, 17, ${Math.random() * 0.15 + 0.05});
             border-radius: 50%;
             left: ${Math.random() * 100}%;
             top: ${Math.random() * 100}%;
@@ -501,5 +501,5 @@ window.SpectreBio = {
 };
 
 // Console branding
-console.log('%c SPECTRE ', 'background: #000; color: #fff; font-size: 20px; font-weight: bold; padding: 10px;');
-console.log('%c Built Different. Worn Fearlessly. ', 'color: #666; font-size: 12px;');
+console.log('%c SPECTRE ', 'background: #111; color: #F2EFE8; font-size: 20px; font-weight: bold; padding: 10px;');
+console.log('%c Built Different. Worn Fearlessly. ', 'color: #555; font-size: 12px;');
