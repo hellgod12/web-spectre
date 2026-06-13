@@ -113,18 +113,22 @@ function initCategoryFilter() {
     });
 }
 
-// Initialize loading screen - Cinematic Intro
+// Initialize loading screen - Branded Experience
 function initLoadingScreen() {
     const loadingScreen = document.getElementById('loadingScreen');
     
-    // Cinematic intro timing:
+    // Branded loading experience timing:
     // 0.0s - Content fade in
     // 0.3s - Logo fade in
     // 0.6s - Text container fade in
     // 0.9s - "BUILT DIFFERENT." fade in
     // 1.1s - "WORN FEARLESSLY." fade in
-    // 1.7s - Loading screen fade out
-    // 2.5s - Loading screen removed
+    // 1.3s - Loading bar container fade in
+    // 1.4s - Loading bar progress starts (1.5s duration)
+    // 1.5s - "ENTERING THE VOID..." status fade in
+    // 2.9s - Loading bar completes
+    // 3.0s - Loading screen fade out
+    // 3.8s - Loading screen removed
     
     setTimeout(() => {
         loadingScreen.classList.add('hidden');
@@ -133,7 +137,7 @@ function initLoadingScreen() {
         setTimeout(() => {
             loadingScreen.style.display = 'none';
         }, 800);
-    }, 1700);
+    }, 3000);
 }
 
 // Initialize particles
