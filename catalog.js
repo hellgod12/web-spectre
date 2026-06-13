@@ -14,11 +14,40 @@ async function loadProducts() {
         }
         productsData = await response.json();
         console.log('Products loaded:', productsData);
+        console.log('Number of products:', productsData.products ? productsData.products.length : 0);
         return productsData;
     } catch (error) {
         console.error('Failed to load products.json:', error);
-        productsData = {};
-        throw error;
+        console.log('Using fallback products data');
+        productsData = {
+            products: [
+                {
+                    id: 1,
+                    name: "SPECTRE Skateboard Deck",
+                    description: "Premium maple skateboard deck dengan custom graphic",
+                    price: "Rp 450.000",
+                    image: "assets/images/products/decks/edited-photo.png",
+                    category: "decks"
+                },
+                {
+                    id: 2,
+                    name: "SPECTRE Skateboard Deck",
+                    description: "Premium maple skateboard deck dengan custom graphic",
+                    price: "Rp 450.000",
+                    image: "assets/images/products/decks/edited-photo(1).png",
+                    category: "decks"
+                },
+                {
+                    id: 3,
+                    name: "SPECTRE Streetwear",
+                    description: "Premium streetwear apparel dengan SPECTRE branding",
+                    price: "Rp 350.000",
+                    image: "assets/images/products/apparel/edited-photo.png",
+                    category: "apparel"
+                }
+            ]
+        };
+        return productsData;
     }
 }
 
