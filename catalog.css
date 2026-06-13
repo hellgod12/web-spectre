@@ -427,12 +427,13 @@ body::before {
 }
 
 .product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
     object-position: center;
     transition: transform var(--transition-medium);
     display: block;
+    margin: auto;
 }
 
 .product-card:hover .product-image img {
