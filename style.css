@@ -399,9 +399,9 @@ body::before {
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.15em;
     color: var(--color-primary-text);
     text-transform: uppercase;
     margin: 8px 0;
@@ -409,12 +409,12 @@ body::before {
 }
 
 .hero-tagline {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 400;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.05em;
     color: var(--color-secondary-text);
     text-transform: none;
-    margin-top: 16px;
+    margin-top: 12px;
     animation: fadeInUp 1s ease 0.9s both;
 }
 
@@ -544,7 +544,7 @@ body::before {
 
 /* Brand Section */
 .brand-section {
-    margin: 100px 0;
+    margin: 80px 0;
     text-align: center;
     animation: fadeInUp 0.8s ease 1.5s both;
 }
@@ -558,23 +558,23 @@ body::before {
 }
 
 .section-title {
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: 0.35em;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
     color: var(--color-primary-text);
     text-transform: uppercase;
-    margin: 40px 0;
+    margin: 32px 0;
 }
 
 .brand-content {
     color: var(--color-secondary-text);
-    font-size: 0.95rem;
-    line-height: 2;
-    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
 }
 
 .brand-content p {
-    margin: 8px 0;
+    margin: 6px 0;
 }
 
 /* Releases Section */
@@ -1047,27 +1047,35 @@ body::before {
 }
 
 /* Responsive Design */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .container {
-        padding: 30px 20px;
-    }
-    
-    .header {
-        margin-bottom: 40px;
+        max-width: 100%;
+        padding: 40px 20px;
     }
     
     .profile-image-container {
-        width: 112px;
-        height: 112px;
+        width: 280px;
+        height: 280px;
+        margin-bottom: 24px;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .profile-ring {
+        width: 240px;
+        height: 240px;
     }
     
     .brand-title {
-        font-size: 2rem;
-        letter-spacing: 0.2em;
+        font-size: 2.5rem;
+        letter-spacing: 0.3em;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
         letter-spacing: 0.15em;
     }
     
@@ -1076,17 +1084,131 @@ body::before {
     }
     
     .cta-button {
-        padding: 26px 30px;
-        min-height: 60px;
+        padding: 24px 28px;
     }
     
     .cta-title {
-        font-size: 1.15rem;
-        letter-spacing: 0.1em;
+        font-size: 1rem;
     }
     
     .cta-description {
+        font-size: 0.75rem;
+    }
+    
+    .cta-arrow {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .cta-container {
+        gap: 14px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .releases-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    
+    .release-placeholder span {
+        font-size: 0.6rem;
+    }
+    
+    .footer-social-link {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .footer-social-link svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .footer {
+        padding: 30px 20px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 16px;
+    }
+    
+    .header {
+        margin-bottom: 40px;
+    }
+    
+    .profile-image-container {
+        width: 240px;
+        height: 240px;
+        margin-bottom: 20px;
+    }
+    
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .profile-ring {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .brand-title {
+        font-size: 2rem;
+        letter-spacing: 0.25em;
+    }
+    
+    .hero-subtitle {
         font-size: 0.85rem;
+        letter-spacing: 0.12em;
+    }
+    
+    .hero-tagline {
+        font-size: 0.75rem;
+    }
+    
+    .cta-button {
+        padding: 20px 24px;
+    }
+    
+    .cta-title {
+        font-size: 0.95rem;
+    }
+    
+    .cta-description {
+        font-size: 0.7rem;
+    }
+    
+    .cta-arrow {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .cta-container {
+        gap: 12px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .releases-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .product-image {
+        min-height: 250px;
+    }
+    
+    .product-info {
+        padding: 20px;
     }
     
     .section-title {
@@ -1096,11 +1218,6 @@ body::before {
     
     .brand-content {
         font-size: 0.85rem;
-    }
-    
-    .releases-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
     }
     
     .release-placeholder span {
