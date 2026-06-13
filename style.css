@@ -94,13 +94,33 @@ body::before {
 }
 
 .loading-logo {
-    width: 120px;
-    height: 120px;
+    width: 280px;
+    height: 280px;
     margin-bottom: 48px;
     object-fit: contain;
     filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.06));
     opacity: 0;
     animation: logoFadeIn 1.2s ease 0.4s forwards;
+    position: relative;
+    z-index: 2;
+}
+
+.loading-logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.loading-ring {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+    animation: ringPulse 3s ease-in-out infinite;
 }
 
 .loading-text {
@@ -310,18 +330,40 @@ body::before {
     width: 400px;
     height: 400px;
     margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-image {
-    width: 100%;
-    height: 100%;
+    width: 280px;
+    height: 280px;
     object-fit: contain;
     filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.08));
     animation: logoReveal 1.5s ease 0.5s both;
+    position: relative;
+    z-index: 2;
 }
 
 .profile-ring {
-    display: none;
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+    animation: ringPulse 3s ease-in-out infinite;
+}
+
+@keyframes ringPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.3;
+    }
 }
 
 @keyframes logoReveal {
