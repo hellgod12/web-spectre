@@ -156,22 +156,22 @@ async function loadInstagramPhotos() {
     }
 }
 
-// Loading Screen - Cinematic Intro
+// Loading Screen - Minimal Luxury Intro
 function initLoadingScreen() {
     const loadingScreen = document.getElementById('loadingScreen');
     
-    // Branded loading experience timing:
+    // Minimal luxury loading experience timing:
     // 0.0s - Content fade in
-    // 0.3s - Logo fade in
+    // 0.4s - Logo fade in (1.2s duration)
     // 0.6s - Text container fade in
-    // 0.7s - "BUILT DIFFERENT." fade in
-    // 0.9s - "WORN FEARLESSLY." fade in
-    // 1.0s - Loading bar container fade in
-    // 1.1s - Loading bar progress starts (0.8s duration)
-    // 1.2s - "ENTERING THE VOID..." status fade in
-    // 1.9s - Loading bar completes
-    // 2.0s - Loading screen fade out
-    // 2.8s - Loading screen removed
+    // 1.0s - "BUILT DIFFERENT." fade in
+    // 1.2s - "WORN FEARLESSLY." fade in
+    // 1.4s - Loading bar container fade in
+    // 1.5s - Loading bar progress starts (1.0s duration)
+    // 1.6s - "ENTERING THE VOID..." status fade in
+    // 2.5s - Loading bar completes
+    // 2.7s - Loading screen fade out
+    // 3.5s - Loading screen removed
     
     setTimeout(() => {
         loadingScreen.classList.add('hidden');
@@ -180,7 +180,7 @@ function initLoadingScreen() {
         setTimeout(() => {
             loadingScreen.style.display = 'none';
         }, 800);
-    }, 2000);
+    }, 2700);
 }
 
 // Click Tracking using localStorage
