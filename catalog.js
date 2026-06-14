@@ -73,7 +73,15 @@ async function loadShopUrl() {
 
 // Render products to grid
 function renderProducts(category = 'all') {
+    console.log('Rendering products for category:', category);
     const productsGrid = document.getElementById('productsGrid');
+    console.log('Products grid element:', productsGrid);
+    
+    if (!productsGrid) {
+        console.error('Products grid element not found!');
+        return;
+    }
+    
     productsGrid.innerHTML = '';
     
     let productsToShow = [];
@@ -86,15 +94,21 @@ function renderProducts(category = 'all') {
         );
     }
     
+    console.log('Products to show:', productsToShow.length);
+    
     if (productsToShow.length === 0) {
         productsGrid.innerHTML = '<p class="no-products">No products found in this category.</p>';
         return;
     }
     
     productsToShow.forEach((product, index) => {
+        console.log('Creating product card for:', product.name);
         const productCard = createProductCard(product, index);
+        console.log('Product card created:', productCard);
         productsGrid.appendChild(productCard);
     });
+    
+    console.log('Products rendered. Grid children:', productsGrid.children.length);
 }
 
 // Create product card element
