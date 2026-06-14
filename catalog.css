@@ -389,6 +389,7 @@ body::before {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    min-height: 200px;
 }
 
 /* Product Card */
@@ -405,6 +406,8 @@ body::before {
     position: relative;
     padding: 0;
     backdrop-filter: blur(10px);
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .product-card:hover {
