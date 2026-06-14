@@ -1,6 +1,8 @@
 // Catalog Page JavaScript
 // Dynamic product loading and filtering
 
+console.log('Catalog script loaded');
+
 let productsData = {};
 let currentCategory = 'all';
 let shopUrl = '';
