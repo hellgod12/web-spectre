@@ -69,12 +69,13 @@ function applyLinksToButtons() {
         'direct-contact': 'direct_contact',
         'join-movement': 'join_movement',
         'instagram': 'instagram',
+        'youtube': 'youtube',
         'tiktok-shop': 'tiktok_shop',
         'catalog': 'catalog'
     };
-    
+
     // Loop melalui semua tombol link
-    document.querySelectorAll('.cta-button, .footer-social-link, .instagram-link, .instagram-cta, .platform-card').forEach(button => {
+    document.querySelectorAll('.cta-button, .footer-social-link, .instagram-link, .instagram-cta, .youtube-link, .youtube-cta, .platform-card').forEach(button => {
         const linkName = button.getAttribute('data-link');
         
         if (linkName && linkMapping[linkName]) {
