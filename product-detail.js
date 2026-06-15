@@ -54,14 +54,28 @@ async function loadProductDescription(productId, category, descriptionFile) {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const description = await response.text();
+        const text = await response.text();
+        
+        // Extract price from the first line if it starts with "PRICE:"
+        let price = '';
+        let description = text;
+        
+        const lines = text.split('\n');
+        if (lines[0].startsWith('PRICE:')) {
+            price = lines[0].replace('PRICE:', '').trim();
+            description = lines.slice(1).join('\n').trim();
+        }
+        
         console.log('Description loaded for product', productId, 'from file', descriptionFile);
-        return description;
+        return { price, description };
     } catch (error) {
         console.error('Failed to load description file:', error);
         // Fallback to basic description from products.json
         const product = (productsData.products || []).find(p => p.id === parseInt(productId));
-        return product ? product.description : 'Product description not available.';
+        return { 
+            price: product ? product.price : '', 
+            description: product ? product.description : 'Product description not available.' 
+        };
     }
 }
 
@@ -92,7 +106,7 @@ async function renderProductDetail() {
     console.log('Product found:', product);
     
     // Load detailed description
-    const detailedDescription = await loadProductDescription(currentProductId, product.category, product.descriptionFile);
+    const { price: descriptionPrice, description: detailedDescription } = await loadProductDescription(currentProductId, product.category, product.descriptionFile);
     
     const container = document.getElementById('productDetailContainer');
     if (!container) {
@@ -103,6 +117,9 @@ async function renderProductDetail() {
     const imageHtml = product.image 
         ? `<img src="${product.image}" alt="${product.name}" loading="lazy">`
         : `<div class="product-placeholder"><span>${product.name}</span></div>`;
+    
+    // Use price from description file if available, otherwise fallback to product price
+    const displayPrice = descriptionPrice || product.price;
     
     container.innerHTML = `
         <div class="product-detail-content">
@@ -115,7 +132,7 @@ async function renderProductDetail() {
             <div class="product-info-section">
                 <div class="product-category-badge">${product.category.toUpperCase()}</div>
                 <h2 class="product-detail-name">${product.name}</h2>
-                <div class="product-detail-price">${product.price}</div>
+                <div class="product-detail-price">${displayPrice}</div>
                 
                 <div class="product-detail-description">
                     <h3>Description</h3>
