@@ -28,7 +28,8 @@
                          "description":  "Premium maple skateboard deck dengan custom graphic",
                          "price":  "Rp 450.000",
                          "image":  "assets/images/products/decks/edited-photo.png",
-                         "category":  "decks"
+                         "category":  "decks",
+                         "descriptionFile":  "deck-1.txt"
                      },
                      {
                          "id":  2,
@@ -36,7 +37,8 @@
                          "description":  "Premium maple skateboard deck dengan custom graphic",
                          "price":  "Rp 450.000",
                          "image":  "assets/images/products/decks/edited-photo (2).png",
-                         "category":  "decks"
+                         "category":  "decks",
+                         "descriptionFile":  "deck-2.txt"
                      },
                      {
                          "id":  3,
@@ -44,7 +46,8 @@
                          "description":  "Premium streetwear apparel dengan SPECTRE branding",
                          "price":  "Rp 350.000",
                          "image":  "assets/images/products/apparel/edited-photo.png",
-                         "category":  "apparel"
+                         "category":  "apparel",
+                         "descriptionFile":  "apparel-1.txt"
                      },
                      {
                          "id":  4,
@@ -52,7 +55,8 @@
                          "description":  "Premium streetwear apparel dengan SPECTRE branding",
                          "price":  "Rp 350.000",
                          "image":  "assets/images/products/apparel/edited-photo (2).png",
-                         "category":  "apparel"
+                         "category":  "apparel",
+                         "descriptionFile":  "apparel-2.txt"
                      },
                      {
                          "id":  5,
@@ -60,7 +64,8 @@
                          "description":  "Premium streetwear apparel dengan SPECTRE branding",
                          "price":  "Rp 350.000",
                          "image":  "assets/images/products/apparel/edited-photo (3).png",
-                         "category":  "apparel"
+                         "category":  "apparel",
+                         "descriptionFile":  "apparel-3.txt"
                      }
                  ],
     "featured":  [

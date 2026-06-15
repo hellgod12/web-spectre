@@ -116,8 +116,8 @@ function createProductCard(product, index) {
     const card = document.createElement('a');
     card.className = 'product-card';
     card.style.animation = `fadeInUp 0.5s ease ${index * 0.1}s both`;
-    card.href = shopUrl;
-    card.target = '_blank';
+    card.href = `product-detail.html?id=${product.id}`;
+    card.target = '_self';
     card.rel = 'noopener';
     
     const imageHtml = product.image 
@@ -132,7 +132,7 @@ function createProductCard(product, index) {
             <div class="product-category">${product.category}</div>
             <h3 class="product-name">${product.name}</h3>
             <p class="product-description">${product.description}</p>
-            <div class="product-cta">VIEW ON SHOPEE →</div>
+            <div class="product-cta">VIEW DETAILS →</div>
         </div>
     `;
     
